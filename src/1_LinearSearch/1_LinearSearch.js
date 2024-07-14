@@ -1,6 +1,6 @@
-function linearSearch(array, searchValue) {
-  for (let i = 0; i < array.length; i++) {
-    const currentValue = array[i];
+function linearSearch(arr, searchValue) {
+  for (let i = 0; i < arr.length; i++) {
+    const currentValue = arr[i];
     if (currentValue === searchValue) {
       return i;
     }
