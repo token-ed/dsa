@@ -28,7 +28,7 @@ function KMP(needle, haystack) {
   const index = -1;
   let m = 0;
   let i = 0;
-  const T = makeKMPTable(splittedNeedle);
+  const T = makeLPSTable(splittedNeedle);
 
   while (m + i < splittedHaystack.length) {
     if (splittedNeedle[i] == splittedHaystack[m + i]) {
@@ -48,7 +48,7 @@ function KMP(needle, haystack) {
   return index;
 }
 
-function makeKMPTable(needleArray) {
+function makeLPSTable(needleArray) {
   const results = [];
   let pos = 2;
   let cnd = 0;
