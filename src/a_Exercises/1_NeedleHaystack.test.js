@@ -1,4 +1,4 @@
-const findNeedle = require("./1_NeedleHaystack");
+const { findNeedle, KMP } = require("./1_NeedleHaystack");
 
 describe("Find a needle in the haystack", () => {
   const tests = [
@@ -24,7 +24,7 @@ describe("Find a needle in the haystack", () => {
 
   tests.forEach(({ description, needle, haystack, expected }) => {
     test(`findNeedle: ${description}`, () => {
-      expect(findNeedle(needle, haystack)).toEqual(expected);
+      expect(KMP(needle, haystack)).toEqual(expected);
     });
   });
 });
